@@ -1,0 +1,27 @@
+[
+    {
+        "model": "live2learnapi.skill",
+        "pk": 1,
+        "fields": 
+            {
+                "skill_level": "Beginner"
+            }
+    },
+    {
+        "model": "live2learnapi.skill",
+        "pk": 2,
+        "fields":
+            {
+                "skill_level": "Intermediate"
+            }
+    },
+    {
+        "model": "live2learnapi.skill",
+        "pk": 3,
+        "fields":
+            {
+                "skill_level": "Advanced"
+            }
+    }
+
+]

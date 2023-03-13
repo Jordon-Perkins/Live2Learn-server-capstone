@@ -1,0 +1,12 @@
+[
+    {
+        "model": "live2learnapi.student",
+        "pk": 1,
+        "fields": 
+                {
+                    "classId": 2,
+                    "userId": 1
+                }
+    }
+
+]
