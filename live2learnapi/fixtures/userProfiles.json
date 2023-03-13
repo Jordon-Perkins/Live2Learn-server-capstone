@@ -1,6 +1,6 @@
 [
     {
-        "model": "live2learnapi.learner",
+        "model": "live2learnapi.userProfile",
         "pk": 1,
         "fields": {
             "user": 1,
