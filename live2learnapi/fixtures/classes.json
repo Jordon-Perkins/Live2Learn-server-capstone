@@ -1,0 +1,26 @@
+[
+    {
+        "model": "live2learnapi.this_class",
+        "pk": 1,
+        "fields":
+                {
+                    "title": "Ballet",
+                    "time": "4:30",
+                    "date": "2020-08-28",
+                    "description": "Take is back to the basics!",
+                    "skillId": "1"
+                }
+    },
+    {
+        "model": "live2learnapi.this_class",
+        "pk": 2,
+        "fields":
+                {
+                    "title": "Tap",
+                    "time": "6:30",
+                    "date": "2023-09-01",
+                    "description": "Learn all the cool tap skills possible",
+                    "skillId": "3"
+                }
+    } 
+]

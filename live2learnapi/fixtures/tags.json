@@ -1,0 +1,20 @@
+[
+    {
+        "model": "live2learnapi.tag",
+        "pk": 1,
+        "fields": 
+            {
+                "tag": "Beginner Ballet",
+                "classId": 1
+            }
+    },
+    {
+        "model": "live2learnapi.tag",
+        "pk": 2,
+        "fields":
+            {
+                "tag": "Gene Kelly",
+                "classId": 2
+            }
+    }
+]
