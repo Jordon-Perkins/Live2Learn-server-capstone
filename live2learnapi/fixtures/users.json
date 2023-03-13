@@ -7,15 +7,14 @@
             "last_login": null,
             "is_superuser": false,
             "username": "Carrie1945",
-            "first_name": "Rebekah",
-            "last_name": "Borthick",
-            "email": "Beka@Hope.com",
+            "first_name": "Carrie",
+            "last_name": "Belk",
+            "email": "me@me.com",
             "is_staff": false,
             "is_active": true,
             "date_joined": "2020-08-28T14:51:39.989Z",
             "groups": [],
-            "user_permissions": [],
-            "bio": "I love to dance and to bring joy to my students and the community we live in."
+            "user_permissions": []
         }
     }
 ]
