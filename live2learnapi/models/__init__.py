@@ -1,4 +1,4 @@
-from .Learner import Learner
+from .UserProfile import UserProfile
 from .Tag import Tag
 from .Instructor import Instructor
 from .Student import Student

@@ -4,8 +4,8 @@
         "pk": 1,
         "fields": 
                 {
-                    "classId": 1,
-                    "learnerId": 1
+                    "this_class_id": 1,
+                    "user_id": 1
                 }
     }
 

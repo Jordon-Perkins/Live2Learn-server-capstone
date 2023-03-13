@@ -1,6 +1,6 @@
 [
     {
-        "model": "live2learnapi.this_class",
+        "model": "live2learnapi.ThisClass",
         "pk": 1,
         "fields":
                 {
@@ -8,11 +8,11 @@
                     "time": "4:30",
                     "date": "2020-08-28",
                     "description": "Take is back to the basics!",
-                    "skillId": "1"
+                    "skill_id": "1"
                 }
     },
     {
-        "model": "live2learnapi.this_class",
+        "model": "live2learnapi.ThisClass",
         "pk": 2,
         "fields":
                 {
@@ -20,7 +20,7 @@
                     "time": "6:30",
                     "date": "2023-09-01",
                     "description": "Learn all the cool tap skills possible",
-                    "skillId": "3"
+                    "skill_id": "3"
                 }
     } 
 ]

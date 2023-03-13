@@ -5,7 +5,7 @@
         "fields": 
             {
                 "tag": "Beginner Ballet",
-                "classId": 1
+                "this_class_id": 1
             }
     },
     {
@@ -14,7 +14,7 @@
         "fields":
             {
                 "tag": "Gene Kelly",
-                "classId": 2
+                "this_class_id": 2
             }
     }
 ]
