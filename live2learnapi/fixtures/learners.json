@@ -1,0 +1,10 @@
+[
+    {
+        "model": "live2learnapi.learner",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "Me"
+        }
+    }
+]
