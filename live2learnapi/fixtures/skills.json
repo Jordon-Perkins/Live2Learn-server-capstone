@@ -1,6 +1,6 @@
 [
     {
-        "model": "live2learnapi.skill",
+        "model": "live2learnapi.Skill",
         "pk": 1,
         "fields": 
             {
@@ -8,7 +8,7 @@
             }
     },
     {
-        "model": "live2learnapi.skill",
+        "model": "live2learnapi.Skill",
         "pk": 2,
         "fields":
             {
@@ -16,7 +16,7 @@
             }
     },
     {
-        "model": "live2learnapi.skill",
+        "model": "live2learnapi.Skill",
         "pk": 3,
         "fields":
             {

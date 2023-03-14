@@ -1,6 +1,6 @@
 [
     {
-        "model": "live2learnapi.tag",
+        "model": "live2learnapi.Tag",
         "pk": 1,
         "fields": 
             {
@@ -9,7 +9,7 @@
             }
     },
     {
-        "model": "live2learnapi.tag",
+        "model": "live2learnapi.Tag",
         "pk": 2,
         "fields":
             {
