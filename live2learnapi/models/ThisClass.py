@@ -3,7 +3,7 @@ from .Skill import Skill
 
 
 class ThisClass(models.Model):
-    instructor = models.ManyToManyField("live2learnapi.UserProfile", through='Instructor', related_name='class_instructor')
+    instructors = models.ManyToManyField("live2learnapi.UserProfile", through='Instructor', related_name='class_instructor')
     description = models.CharField(max_length=200)
     date = models.DateField(auto_now=False, null=True)
     time = models.TimeField(auto_now=False, null=True)

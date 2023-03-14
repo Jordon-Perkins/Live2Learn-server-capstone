@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'live2learnapi',
 ]
 
+AUTH_USER_MODEL = "live2learnapi.UserProfile"
+
 # THIS IS NEW
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
