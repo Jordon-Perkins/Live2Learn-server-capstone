@@ -14,6 +14,7 @@ class ClassesView(ViewSet):
         Returns:
             Response -- JSON serialized event
         """
+        print(f"Getting class with id: {pk}")
         this_class = ThisClass.objects.get(pk=pk)
         serializer = ClassesSerializer(this_class)
         return Response(serializer.data)
@@ -27,7 +28,7 @@ class ClassesView(ViewSet):
         # for this_class in classes:
         #     # Check to see if the gamer is in the attendees list on the event
         #     this_class.joined = Student in this_class.attendees.all()
-
+        print("Getting all classes")
         classes = ThisClass.objects.all()
         serializer = ClassesSerializer(classes, many=True)
         return Response(serializer.data)
@@ -40,8 +41,10 @@ class ClassesView(ViewSet):
         """
         # instructor = Instructor.objects.get(user=request.auth.user)
         # student = Student.objects.get(user=request.auth.user)
+        print("Getting the skill associated with class")
         skill = Skill.objects.get(pk=request.data["skillId"])
 
+        print("Creating a class")
         this_class = ThisClass.objects.create(
             date=request.data["date"],
             time=request.data["time"],
@@ -52,7 +55,9 @@ class ClassesView(ViewSet):
             skill=skill
         )
 
+        print("Creating tags for class")
         for tag in request.data["tags"]:
+            print(f"Creating tag: {tag}")
             Tag.objects.create(
                 this_class = this_class,
                 tag = tag
@@ -80,6 +85,17 @@ class ClassesView(ViewSet):
     
         skill = Skill.objects.get(pk=request.data["skillId"])
         this_class.skill = skill
+
+        for tag in Tag.objects.filter(this_class = this_class):
+            tag.delete()
+
+        for tag in request.data["tags"]:
+            Tag.objects.create(
+                this_class = this_class,
+                tag = tag
+            )
+
+
         this_class.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -108,6 +124,13 @@ class ClassesView(ViewSet):
         Student.objects.get(student=student, this_class=this_class).delete()
         return Response({'message': 'this student was removed'}, status=status.HTTP_204_NO_CONTENT)
 
+
+class TagSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Tag
+        fields = ( 'id', 'tag', )
+
 class InstructorSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -125,8 +148,9 @@ class ClassesSerializer(serializers.ModelSerializer):
     """
     instructors = InstructorSerializer(many=True)
     skill = SkillSerializer(many=False)
+    tags = TagSerializer(many=True)
 
     class Meta:
         model = ThisClass
-        fields = ('id', 'title', 'instructors', 'description', 'date', 'time', 'students', 'skill',
+        fields = ('id', 'title', 'instructors', 'description', 'date', 'time', 'students', 'skill', "tags",
         'joined')

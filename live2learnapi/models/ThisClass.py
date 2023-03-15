@@ -1,5 +1,6 @@
 from django.db import models
 from .Skill import Skill
+from .Tag import Tag
 
 
 class ThisClass(models.Model):
@@ -18,3 +19,8 @@ class ThisClass(models.Model):
     @joined.setter
     def joined(self, value):
         self.__joined = value
+
+    @property
+    def tags(self):
+        tags = Tag.objects.filter(this_class = self)
+        return tags
