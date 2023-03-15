@@ -52,6 +52,12 @@ class ClassesView(ViewSet):
             skill=skill
         )
 
+        for tag in request.data["tags"]:
+            Tag.objects.create(
+                this_class = this_class,
+                tag = tag
+            )
+
         Instructor.objects.create(
             user=request.auth.user, this_class=this_class
         )
