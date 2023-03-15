@@ -23,6 +23,11 @@ class ClassesView(ViewSet):
         Returns:
             Response -- JSON serialized list of classes
         """
+        # Set the `joined` property on every event
+        # for this_class in classes:
+        #     # Check to see if the gamer is in the attendees list on the event
+        #     this_class.joined = Student in this_class.attendees.all()
+
         classes = ThisClass.objects.all()
         serializer = ClassesSerializer(classes, many=True)
         return Response(serializer.data)
@@ -85,7 +90,7 @@ class ClassesView(ViewSet):
     
         student = UserProfile.objects.get(user=request.auth.user)
         this_class = ThisClass.objects.get(pk=pk)
-        this_class.attend.add(student)
+        this_class.ThisClass.add(student)
         return Response({'message': 'student was added'}, status=status.HTTP_201_CREATED)
     
     @action(methods=['delete'], detail=True)
@@ -103,17 +108,17 @@ class InstructorSerializer(serializers.ModelSerializer):
         model = Instructor
         fields = ( 'id', 'full_name', )
 
-# class SkillSerializer(serializers.ModelSerializer):
+class SkillSerializer(serializers.ModelSerializer):
 
-#     class Meta:
-#         model = Skill
-#         fields = ( 'id','skill_level', )
+    class Meta:
+        model = Skill
+        fields = ( 'id','skill_level', )
 
 class ClassesSerializer(serializers.ModelSerializer):
     """JSON serializer for events
     """
     instructors = InstructorSerializer(many=True)
-    # skill = SkillSerializer(many=False)
+    skill = SkillSerializer(many=False)
 
     class Meta:
         model = ThisClass
