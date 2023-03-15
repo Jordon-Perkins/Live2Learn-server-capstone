@@ -18,12 +18,12 @@ from django.conf.urls import include
 from django.urls import path
 from live2learnapi.views import register_user, login_user
 from rest_framework import routers
-from live2learnapi.views import  ClassesView
+from live2learnapi.views import  ClassesView, SkillView
 
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'classes', ClassesView, 'classes')
-
+router.register(r'skills', SkillView, 'skills')
 
 
 

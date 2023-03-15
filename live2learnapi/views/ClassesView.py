@@ -7,7 +7,7 @@ from live2learnapi.models import ThisClass, Instructor, UserProfile, Skill, Tag,
 from rest_framework.decorators import action
 
 class ClassesView(ViewSet):
-    """ive2Learn classes view"""
+    """Live2Learn classes view"""
 
     def retrieve(self, request, pk):
         """Handle GET requests for single class
@@ -86,7 +86,7 @@ class ClassesView(ViewSet):
 
     @action(methods=['post'], detail=True)
     def signup(self, request, pk):
-        """Post request for a user to sign up for an event"""
+        """Post request for a user to sign up for a class"""
     
         student = UserProfile.objects.get(user=request.auth.user)
         this_class = ThisClass.objects.get(pk=pk)
@@ -95,7 +95,7 @@ class ClassesView(ViewSet):
     
     @action(methods=['delete'], detail=True)
     def leave(self, request, pk):
-        """Delete request for a user to sign up for an event"""
+        """Delete request for a user to sign up for an class"""
     
         student = UserProfile.objects.get(user=request.auth.user)
         this_class = ThisClass.objects.get(pk=pk)
@@ -115,7 +115,7 @@ class SkillSerializer(serializers.ModelSerializer):
         fields = ( 'id','skill_level', )
 
 class ClassesSerializer(serializers.ModelSerializer):
-    """JSON serializer for events
+    """JSON serializer for classes
     """
     instructors = InstructorSerializer(many=True)
     skill = SkillSerializer(many=False)
