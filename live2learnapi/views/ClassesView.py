@@ -106,6 +106,8 @@ class ClassesView(ViewSet):
         this_class.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+
+
     @action(methods=['post'], detail=True)
     def signup(self, request, pk):
         """Post request for a user to sign up for a class"""
@@ -123,6 +125,8 @@ class ClassesView(ViewSet):
         this_class = ThisClass.objects.get(pk=pk)
         Student.objects.get(student=student, this_class=this_class).delete()
         return Response({'message': 'this student was removed'}, status=status.HTTP_204_NO_CONTENT)
+
+
 
 
 class TagSerializer(serializers.ModelSerializer):

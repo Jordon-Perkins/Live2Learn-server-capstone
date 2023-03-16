@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
-from live2learnapi.views import register_user, login_user
+from live2learnapi.views import ClassesInstructingView, register_user, login_user
 from rest_framework import routers
-from live2learnapi.views import  ClassesView, SkillView
+from live2learnapi.views import  ClassesView, SkillView, ClassesInstructingView, InstructorsView
 
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'classes', ClassesView, 'classes')
 router.register(r'skills', SkillView, 'skills')
+router.register(r'classes_instructing', ClassesInstructingView, 'classes_instructing')
+router.register(r'instructors', InstructorsView,'instructors')
 
 
 

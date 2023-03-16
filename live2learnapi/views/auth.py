@@ -1,5 +1,4 @@
 from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
@@ -37,28 +36,23 @@ def login_user(request):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
-    '''Handles the creation of a new gamer for authentication
+    '''Handles the creation of a new user for authentication
     Method arguments:
       request -- The full HTTP request object
     '''
 
     # Create a new user by invoking the `create_user` helper method
     # on Django's built-in User model
-    new_user = User.objects.create_user(
+    new_user = UserProfile.objects.create_user(
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
-    )
-
-    # Now save the extra info in the live2learnapi_userProfiles table
-    UserProfile = UserProfile.objects.create(
+        last_name=request.data['last_name'],
         bio=request.data['bio'],
-        user=new_user
     )
-
+    
     # Use the REST Framework's token generator on the new user account
-    token = Token.objects.create(user=UserProfile.user)
+    token = Token.objects.create(user=new_user)
     # Return the token to the client
     data = { 'token': token.key }
     return Response(data)
