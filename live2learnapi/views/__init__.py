@@ -3,3 +3,4 @@ from .ClassesView import ClassesView
 from .SkillView import SkillView
 from .ClassesInstructingView import ClassesInstructingView
 from .InstructorsView import InstructorsView
+from .ClassesAttendingView import ClassesAttendingView
