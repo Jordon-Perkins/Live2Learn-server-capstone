@@ -36,6 +36,8 @@ class InstructorSerializer(serializers.ModelSerializer):
         model = Instructor
         fields = ( 'id', 'full_name', )
 
+        
+
 class SkillSerializer(serializers.ModelSerializer):
 
     class Meta:

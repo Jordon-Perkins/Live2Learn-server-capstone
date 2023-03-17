@@ -1,21 +1,154 @@
 [
-    {
-        "model": "live2learnapi.UserProfile",
-        "pk": 1,
-        "fields": {
-            "bio": "Me",
-            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
-            "last_login": null,
-            "is_superuser": false,
-            "username": "Carrie1945",
-            "first_name": "Carrie",
-            "last_name": "Belk",
-            "email": "me@me.com",
-            "is_staff": false,
-            "is_active": true,
-            "date_joined": "2020-08-28T14:51:39.989Z",
-            "groups": [],
-            "user_permissions": []
-        }
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$njOATSf2e7A04abvGsLA4a$oaR5srS8XTFXipzJR8n+4pDHbGx9PacwFyjHG25kor0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "JordiPerk",
+        "first_name": "Jordon",
+        "last_name": "Perkins",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:07:43.164Z",
+        "bio": "so Done!!!!",
+        "groups": [],
+        "user_permissions": []
     }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$bqo6mg0ItPpazL5BBjsCuo$GH8AWakczcMqZZSGttT75F+uAX5nOcOyIZm8SB6YChc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "TayTay",
+        "first_name": "Taylor ",
+        "last_name": "Perkins",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:10:56.990Z",
+        "bio": "Love music but love my wife more",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$DM8xtSQWB3kXjS0S5EqHAJ$VSzAyl4WHP6171zVYb9cI0GuQ1d5ll4ityw2jCK2qw4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "NattyHud",
+        "first_name": "Natalie",
+        "last_name": "Hudson",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:11:27.304Z",
+        "bio": "Push it!",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$lKpVq2K8kgJReidGKpTwhj$pChlgppRr1v1azBR5Ug/Ng8cU0jUYdnwJC/JqNh5W8I=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Haliken",
+        "first_name": "Hallie",
+        "last_name": "Kominos",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:13:56.395Z",
+        "bio": "I'm going to be a girl mom!!!",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$Z2lPDVpviDuT9354IGCntT$eAbHLpi664V3oqupNCIQLQq4JJTwLynJFCs4sJ2fzxE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "MadHad",
+        "first_name": "Haddi",
+        "last_name": "McFarlin",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:14:27.390Z",
+        "bio": "I love to sing and I like what I like",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$xtkXJy0vY0YaFLuAeDehp7$9iXM8DM876xMul8vp/g+dbQMxlQYZOuBlnSfgcWKkH0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bluschuy",
+        "first_name": "Schyuler",
+        "last_name": "Shockley",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:15:20.079Z",
+        "bio": "I love my emo music and Video games, but I also love ballet pink!",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$A61CMgKiY5Oc9ukOI1DTFO$VKMPSEjXqxfDx3iP9RcDyGC0/IxV07SB4XvT0YSl+pM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "NinaJoy",
+        "first_name": "Anna",
+        "last_name": "Chapman",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:15:56.481Z",
+        "bio": "Still learning who I am but I love all things!",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "live2learnapi.userprofile",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$q20xQVgqJtpVgSCEbGKqAf$H4t4ZSowpAd7P70T0mCaktgJvMLaIlFDZ7jK+OB/Gjg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "AuntieEm",
+        "first_name": "Emma",
+        "last_name": "Perkins",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-17T15:16:28.495Z",
+        "bio": "I love the drama! All drama!",
+        "groups": [],
+        "user_permissions": []
+    }
+}
 ]
