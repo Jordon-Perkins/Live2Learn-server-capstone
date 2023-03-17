@@ -120,10 +120,11 @@ class ClassesView(ViewSet):
     @action(methods=['delete'], detail=True)
     def leave(self, request, pk):
         """Delete request for a user to sign up for an class"""
-    
-        student = UserProfile.objects.get(user=request.auth.user)
-        this_class = ThisClass.objects.get(pk=pk)
-        Student.objects.get(student=student, this_class=this_class).delete()
+        
+        Student.objects.filter(
+            user=request.auth.user, 
+            this_class=ThisClass.objects.get(pk=pk)
+        ).delete()
         return Response({'message': 'this student was removed'}, status=status.HTTP_204_NO_CONTENT)
 
 
