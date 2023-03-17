@@ -111,10 +111,10 @@ class ClassesView(ViewSet):
     @action(methods=['post'], detail=True)
     def signup(self, request, pk):
         """Post request for a user to sign up for a class"""
-    
-        student = UserProfile.objects.get(student=request.auth.user)
-        this_class = ThisClass.objects.get(pk=pk)
-        this_class.students.add(student)
+        Student.objects.create(
+            user=request.auth.user, 
+            this_class=ThisClass.objects.get(pk=pk)
+        )
         return Response({'message': 'student was added'}, status=status.HTTP_201_CREATED)
     
     @action(methods=['delete'], detail=True)
