@@ -27,7 +27,7 @@ class ClassesView(ViewSet):
         # Set the `joined` property on every event
         # for this_class in classes:
         #     # Check to see if the gamer is in the attendees list on the event
-        #     this_class.joined = Student in this_class.attendees.all()
+        #     this_class.joined = Student in this_class.students.all()
         print("Getting all classes")
         classes = ThisClass.objects.all()
         serializer = ClassesSerializer(classes, many=True)
@@ -112,9 +112,9 @@ class ClassesView(ViewSet):
     def signup(self, request, pk):
         """Post request for a user to sign up for a class"""
     
-        student = UserProfile.objects.get(user=request.auth.user)
+        student = UserProfile.objects.get(student=request.auth.user)
         this_class = ThisClass.objects.get(pk=pk)
-        this_class.ThisClass.add(student)
+        this_class.students.add(student)
         return Response({'message': 'student was added'}, status=status.HTTP_201_CREATED)
     
     @action(methods=['delete'], detail=True)
@@ -141,6 +141,12 @@ class InstructorSerializer(serializers.ModelSerializer):
         model = Instructor
         fields = ( 'id', 'full_name', )
 
+class StudentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Student
+        fields = ( 'id', 'full_name', )
+
 class SkillSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -153,6 +159,7 @@ class ClassesSerializer(serializers.ModelSerializer):
     instructors = InstructorSerializer(many=True)
     skill = SkillSerializer(many=False)
     tags = TagSerializer(many=True)
+    students = StudentSerializer(many=True)
 
     class Meta:
         model = ThisClass

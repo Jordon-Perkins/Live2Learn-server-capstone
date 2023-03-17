@@ -1,20 +1,114 @@
 [
-    {
-        "model": "live2learnapi.Tag",
-        "pk": 1,
-        "fields": 
-            {
-                "tag": "Beginner Ballet",
-                "this_class_id": 1
-            }
-    },
-    {
-        "model": "live2learnapi.Tag",
-        "pk": 2,
-        "fields":
-            {
-                "tag": "Gene Kelly",
-                "this_class_id": 2
-            }
+{
+    "model": "live2learnapi.tag",
+    "pk": 1,
+    "fields": {
+        "tag": "HansZimmer",
+        "this_class": 1
     }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 2,
+    "fields": {
+        "tag": "InTime",
+        "this_class": 1
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 3,
+    "fields": {
+        "tag": "GiveMeEpic",
+        "this_class": 1
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 4,
+    "fields": {
+        "tag": "Angst",
+        "this_class": 2
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 5,
+    "fields": {
+        "tag": "Elation",
+        "this_class": 2
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 6,
+    "fields": {
+        "tag": "Grief",
+        "this_class": 2
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 7,
+    "fields": {
+        "tag": "High",
+        "this_class": 2
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 8,
+    "fields": {
+        "tag": "Calypso",
+        "this_class": 3
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 9,
+    "fields": {
+        "tag": "Drill",
+        "this_class": 3
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 10,
+    "fields": {
+        "tag": "TurnCombo",
+        "this_class": 3
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 11,
+    "fields": {
+        "tag": "easy",
+        "this_class": 4
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 12,
+    "fields": {
+        "tag": "beginner",
+        "this_class": 4
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 13,
+    "fields": {
+        "tag": "funforall",
+        "this_class": 4
+    }
+},
+{
+    "model": "live2learnapi.tag",
+    "pk": 14,
+    "fields": {
+        "tag": "",
+        "this_class": 4
+    }
+}
 ]

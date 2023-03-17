@@ -1,26 +1,46 @@
 [
-    {
-        "model": "live2learnapi.ThisClass",
-        "pk": 1,
-        "fields":
-                {
-                    "title": "Ballet",
-                    "time": "4:30",
-                    "date": "2020-08-28",
-                    "description": "Take is back to the basics!",
-                    "skill_id": "1"
-                }
-    },
-    {
-        "model": "live2learnapi.ThisClass",
-        "pk": 2,
-        "fields":
-                {
-                    "title": "Tap",
-                    "time": "6:30",
-                    "date": "2023-09-01",
-                    "description": "Learn all the cool tap skills possible",
-                    "skill_id": "3"
-                }
-    } 
+{
+    "model": "live2learnapi.thisclass",
+    "pk": 1,
+    "fields": {
+        "description": "Set to an epic song",
+        "date": "2023-03-31",
+        "time": "05:05:00",
+        "title": "Epic Ballet",
+        "skill": 3
+    }
+},
+{
+    "model": "live2learnapi.thisclass",
+    "pk": 2,
+    "fields": {
+        "description": "all the emotion",
+        "date": "2023-06-07",
+        "time": "05:05:00",
+        "title": "Lyrical with Feeling",
+        "skill": 1
+    }
+},
+{
+    "model": "live2learnapi.thisclass",
+    "pk": 3,
+    "fields": {
+        "description": "all the skills you see in competition but in a class without the preasure",
+        "date": "2023-02-19",
+        "time": "09:08:00",
+        "title": "Killer Jazz",
+        "skill": 3
+    }
+},
+{
+    "model": "live2learnapi.thisclass",
+    "pk": 4,
+    "fields": {
+        "description": "learn tap at any stage",
+        "date": "2023-02-19",
+        "time": "09:08:00",
+        "title": "Tap for all",
+        "skill": 1
+    }
+}
 ]
